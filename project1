@@ -1,0 +1,7 @@
+from django.conf.urls import patterns,url
+from cab.views import snippets
+urlpatterns = patterns(''
+	url(r'^(?P<username>[\w.@+-]+)/$',
+	snippets.author_snippets,
+	name='taxi_author_snippets'),
+)
